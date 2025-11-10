@@ -18,11 +18,11 @@
 
 # 🧙 Features
 - 🐎 Run Fika Headless client without display server in docker container, with or without GPU.
-- 🔄 Supports [Corter-ModSync](https://github.com/c-orter/modsync/), to automatically keep headless client mods up to date
+- 🔄 Supports [Corter-ModSync](https://github.com/c-orter/modsync/) (SPT version 3.11.x and below only), to automatically keep headless client mods up to date
 - 🔨 Automatic restart on raid end, to manage container memory usage
 - 🚚 Automatic purging of EFT `Logs/` dir, to clear out large logfiles due to logspam
 - 🍬 Optionally use Nvidia GPU when running the client, still completely headless without a real display
-- 🧪 Tested and works on SPT 3.9.x, 3.10.x, 3.11.x
+- 🧪 Tested and works on SPT 3.9.x, 3.10.x, 3.11.x, 4.0.x
 - 🦢 Pelican support - just follow the Pelican instructions in the installation steps.
 
 # 👻 Headless Client
