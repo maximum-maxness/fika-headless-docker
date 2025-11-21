@@ -47,26 +47,21 @@ docker pull ghcr.io/zhliau/fika-headless-docker:latest
 ```
 
 # 🚤 Running
-> [!NOTE]
-> This image is confirmed to work on Unraid, Proxmox, but there may be issues with the client stalling.
->
-> This image **will** work on Pelican assuming you use the Pelican egg file provided in this repo.
->
-> This image will **not** run on WSL2 because of permissions issues.
->
-> This image will **not** run on ARM hosts, since it uses wine built on x86.
-
 > [!WARNING]
 > If you are running this image on SPT version < 3.11, make sure to disable HTTPS by setting the environment variable `HTTPS` to `false`!
 
 ## Prerequisites
-- An SPT backend server running somewhere reachable by your docker host. Best if running on the same host.
+- ✔️ An SPT backend server running somewhere reachable by your docker host. Best if running on the same host.
   - You can use my other docker image for running SPT server + Fika: [fika-spt-server-docker](https://github.com/zhliau/fika-spt-server-docker)
-- A host with a CPU capable of running EFT+SPT Client (**the actual game itself**). This will be a disaster running on something underpowered like a Pi since the headless client will host the raid and run all of the AI and raid logic.
-- A directory on your docker host containing a **working copy of the FIKA SPT Client**.
+- ✔️ A host with a CPU capable of running EFT+SPT Client (**the actual game itself**). This will be a disaster running on something underpowered since the headless client will host the raid and run all of the AI and raid logic.
+- ✔️ A directory on your docker host containing a **working copy of the FIKA SPT Client**.
   - This is the folder including the `BepInEx` folder with all your plugins, and the `EscapeFromTarkov.exe` binary. This copy must have been run at least once to be considered working. You can copy your working install from wherever you normally run your Fika client.
-- The `Fika.Headless.dll` plugin file (or `Fika.Dedicated.dll` if running SPT version < 3.11.0) in the FIKA SPT Client's `BepInEx/plugins` folder.
+- ✔️ The `Fika.Headless.dll` plugin file (or `Fika.Dedicated.dll` if running SPT version < 3.11.0) in the FIKA SPT Client's `BepInEx/plugins` folder.
 
+> [!NOTE]
+> - ❌ **ARM** is **not supported** since the image uses wine built on x86
+> - ❌ **WSL or Docker for Windows** or any other VM-based docker solution is **not supported** since there are permissions issues for containers running in VMs accessing host volumes
+> - ℹ️ This image can run on **Unraid, Proxmox**, but there may be issues with the client stalling due to older kernel versions
 
 ## Steps
 ### 1. **Prepare a Headless Client Installation**
