@@ -26,7 +26,14 @@
 - 🦢 Pelican support - just follow the Pelican instructions in the installation steps.
 
 # 👻 Headless Client
-
+> [!WARNING]
+> It is **strongly recommended** to run the headless client on a **Windows host** if you have one available.
+>
+> Due to the ridiculous way that the EFT client handles memory and paging RAM to disk, the headless client container will require a very large amount of RAM and swap, much more than if you were to run the client on Windows.
+> 
+> Having said this, many users have successfully used this image to run a headless client. If you are still determined to do this, read each step in the [Running](#-running) section carefully and make sure to follow instructions thoroughly.
+> 
+> If you run into trouble, do **NOT** ask for support in the official Fika Discord for this image. First check the [troubleshooting wiki page](https://github.com/zhliau/fika-headless-docker/wiki/%F0%9F%A7%B0-Troubleshooting), and then open an issue in this repo if your problem still isn't solved.
 ## What is a Headless Client?
 
 The Fika headless client is a separate instance of the game client that runs without a display. It acts as a "silent player" that hosts the raid, allowing other players to join raids without one of them having to host the raid on their own machine.
