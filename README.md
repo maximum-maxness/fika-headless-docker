@@ -31,7 +31,7 @@
 >
 > Due to the ridiculous way that the EFT client handles memory and paging RAM to disk, the headless client container will require a very large amount of RAM and swap, much more than if you were to run the client on Windows.
 > 
-> Having said this, many users have successfully used this image to run a headless client. If you are still determined to do this, read each step in the [Running](#-running) section carefully and make sure to follow instructions thoroughly.
+> Having said this, many users including myself have successfully used this image to host headless clients on Linux. If you are still determined to do this, read each step in the [Running](#-running) section carefully and make sure to follow instructions thoroughly.
 > 
 > If you run into trouble, do **NOT** ask for support in the official Fika Discord for this image. First check the [troubleshooting wiki page](https://github.com/zhliau/fika-headless-docker/wiki/%F0%9F%A7%B0-Troubleshooting), and then open an issue in this repo if your problem still isn't solved.
 ## What is a Headless Client?
