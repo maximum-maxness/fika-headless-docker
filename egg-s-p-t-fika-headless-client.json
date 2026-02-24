@@ -1,15 +1,13 @@
 {
     "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PANEL",
     "meta": {
-        "version": "PLCN_v1",
+        "version": "PTDL_v2",
         "update_url": null
     },
     "exported_at": "2025-04-25T10:03:18+00:00",
     "name": "SPT Fika Headless Client",
     "author": "dazzuh@radiant.dj",
-    "uuid": "f4bb2b79-d64c-4c4e-aefd-876c36cdb9cd",
     "description": "SPT Fika Headless egg based on https:\/\/github.com\/zhliau\/fika-headless-docker",
-    "tags": [],
     "features": [],
     "docker_images": {
         "ghcr.io\/zhliau\/fika-headless-docker:latest": "ghcr.io\/zhliau\/fika-headless-docker:latest"
@@ -37,10 +35,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 8
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "DISABLE BATCHMODE",
@@ -49,10 +44,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 14
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "DISABLE NODYNAMICAI",
@@ -61,10 +53,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 5
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "ENABLE LOG PURGE",
@@ -73,10 +62,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 7
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "ESYNC",
@@ -85,10 +71,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 9
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "FSYNC",
@@ -97,10 +80,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 10
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "HTTPS",
@@ -109,11 +89,7 @@
             "default_value": "true",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "required",
-                "string"
-            ],
-            "sort": 4
+            "rules": "required|string|in:true,false"
         },
         {
             "name": "NTSYNC",
@@ -122,10 +98,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 11
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "PROFILE ID",
@@ -134,11 +107,7 @@
             "default_value": "",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "required",
-                "string"
-            ],
-            "sort": 3
+            "rules": "required|string"
         },
         {
             "name": "SAVE LOG ON EXIT",
@@ -147,8 +116,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [],
-            "sort": 16
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "SERVER PORT",
@@ -157,11 +125,7 @@
             "default_value": "6969",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "required",
-                "string"
-            ],
-            "sort": 2
+            "rules": "required|string"
         },
         {
             "name": "SERVER URL",
@@ -170,11 +134,7 @@
             "default_value": "your.spt.server.ip",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "required",
-                "string"
-            ],
-            "sort": 1
+            "rules": "required|string"
         },
         {
             "name": "USE GRAPHICS",
@@ -183,10 +143,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 13
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "USE MODSYNC",
@@ -195,10 +152,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 6
+            "rules": "nullable|string|in:true,false"
         },
         {
             "name": "USE PELICAN",
@@ -207,11 +161,7 @@
             "default_value": "true",
             "user_viewable": false,
             "user_editable": false,
-            "rules": [
-                "required",
-                "string"
-            ],
-            "sort": 12
+            "rules": "required|string|in:true,false"
         },
         {
             "name": "XVFB_DEBUG",
@@ -220,10 +170,7 @@
             "default_value": "false",
             "user_viewable": true,
             "user_editable": true,
-            "rules": [
-                "string"
-            ],
-            "sort": 15
+            "rules": "nullable|string|in:true,false"
         }
     ]
 }
