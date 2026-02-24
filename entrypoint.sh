@@ -19,6 +19,8 @@ nographics="-nographics"
 batchmode="-batchmode"
 nodynamicai="-noDynamicAI"
 
+USER_STR="$(id -un 2>/dev/null || echo "uid=$(id -u)")"
+
 save_log_on_exit=${SAVE_LOG_ON_EXIT:-false}
 esync=${ESYNC:-false}
 fsync=${FSYNC:-false}
@@ -54,7 +56,7 @@ elif [[ "$fsync" == "true" ]]; then
 fi
 
 if [ "$USE_PELICAN" == "true" ]; then
-    echo "Running in Pelican mode as user $(whoami)"
+    echo "Running in Pelican mode as user ${USER_STR}"
     pelican=true
 fi
 
@@ -144,7 +146,7 @@ use_pelican() {
     
     # Run the Server
     echo "Modified Startup: ${MODIFIED_STARTUP}"
-    echo "Running Pelican with user $(whoami)"
+    echo "Running in Pelican mode as user ${USER_STR}"
     eval ${MODIFIED_STARTUP}
 }
 
@@ -152,7 +154,7 @@ init_pelican_wineprefix() {
     echo "Creating wineprefix for pelican"
     export WINEPREFIX=/home/container/.wine
     cp -r -u /.wine /home/container
-    chown -R $(whoami) /home/container/.wine
+    chown -R "$(id -u):$(id -g)" /home/container/.wine 2>/dev/null || true
 }
 
 # Main client function. Should block until client has exited
